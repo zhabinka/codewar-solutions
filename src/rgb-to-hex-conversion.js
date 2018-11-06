@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/rgb-to-hex-conversion/train/javascript
+// https://www.codewars.com/kata/rgb-to-hex-conversion
 
 const checkValue = (x) => {
   switch (true) {
