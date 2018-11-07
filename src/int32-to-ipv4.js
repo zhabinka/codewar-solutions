@@ -3,7 +3,7 @@
 const int32ToIp = code => code
   .toString(2)
   .padStart(32, 0)
-  .match(/.{1,8}/g)
+  .match(/.{8}/g)
   .map(el => parseInt(el, 2))
   .join('.');
 
