@@ -1,4 +1,7 @@
-const separate = str => [str.match(/^\D+/), str.match(/\d*/g).join('')];
+const separate = str => [
+  str.match(/^\D*/g),
+  str.match(/\d*/g).join(''),
+];
 
 const strInc = (str) => {
   const [chars, num] = separate(str);
