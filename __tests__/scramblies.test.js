@@ -21,7 +21,7 @@ test('Scramble 5', () => {
 });
 
 test('String inc 6', () => {
-  expect(scramble('scriptsjava', 'javascripts')).toBe(true);
+  expect(scramble('soppwtbqbpszexjgcswawzdmgfdsbukivgiiwqccrucylasrsrrjqhgbplnnvkzfdumkepbywipphboqiegzeggtbbvkatwurkctfqvsiyqynenxahkdfepphgngsazmbwbpbphtedajwoogyzwqtcdrwsxxuatxtmhfnsxdiioyemevp', 'zwigaumywtgltlbrwanqxujvawphorynmtahlaxaxkavknzbxatfczobnwnwauhmiktgrqjnowuqhoyfluahnsfkmmprccp')).toBe(false);
 });
 
 test('String inc 7', () => {

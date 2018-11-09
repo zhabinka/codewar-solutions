@@ -1,7 +1,11 @@
 // https://www.codewars.com/kata/scramblies/
 
 const scramble = (chars, str) => {
-  return [...str].reduce((acc, el) => (acc ? chars.includes(el) : false));
+  if (!chars.includes(str[0])) {
+    return str.length === 0;
+  }
+
+  return scramble(chars.replace(str[0], ''), str.slice(1));
 };
 
 export default scramble;
