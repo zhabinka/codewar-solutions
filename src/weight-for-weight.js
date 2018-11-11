@@ -4,7 +4,7 @@ import sumDigit from './sum-digital';
 
 const sortWeight = (a, b) => {
   if (a.weight === b.weight) {
-    return String(a.num) < String(b.num) ? -1 : 1;
+    return (a.num).localeCompare(b.num);
   }
 
   return a.weight - b.weight;
