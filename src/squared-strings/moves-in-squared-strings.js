@@ -11,6 +11,19 @@ const selfieAndRot = (arr) => {
   return selfieArr.concat(rot(selfieArr));
 };
 
+const diagMirror = (arr) => {
+  const iter = (data, i) => {
+    if (i === data.length) {
+      return [];
+    }
+    const sideSquare = data.reduce((acc, el) => acc.concat(el[i]), '');
+
+    return [sideSquare].concat(iter(data, i + 1));
+  };
+
+  return iter(arr, 0);
+};
+
 const oper = (f, data) => f(data.split('\n')).join('\n');
 
 export {
@@ -19,4 +32,7 @@ export {
   horMirror,
   rot,
   selfieAndRot,
+  diagMirror,
+  // rot90Clock,
+  // selfieAndDiag,
 };

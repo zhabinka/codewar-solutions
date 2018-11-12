@@ -4,6 +4,9 @@ import {
   horMirror,
   rot,
   selfieAndRot,
+  diagMirror,
+  rot90Clock,
+  selfieAndDiag,
 } from '../src/squared-strings/moves-in-squared-strings';
 
 test('Vertical Mirror 1', () => {
@@ -46,6 +49,20 @@ test('Selfie and Rot Mirror 2', () => {
   expect(oper(selfieAndRot, 'uLcq\nJkuL\nYirX\nnwMB')).toBe(mirror8);
 });
 
+test('Diagonale Sum', () => {
+  const mirror9 = 'weetvI\nuNhBWF\nUHiTNk\nyWflpG\nPxmFdj\nCwiIvZ';
+  expect(oper(diagMirror, 'wuUyPC\neNHWxw\nehifmi\ntBTlFI\nvWNpdv\nIFkGjZ')).toBe(mirror9);
+});
+
+test('Rot 90-Clock', () => {
+  const mirror10 = 'Sixdvr\ndJNCGg\nmBWhca\nEYgZEv\nKDXVKc\nbORWle';
+  expect(oper(rot90Clock, 'rgavce\nvGcEKl\ndChZVW\nxNWgXR\niJBYDO\nSdmEKb')).toBe(mirror10);
+});
+
+test('Selfie And Diagonale', () => {
+  const mirror11 = 'NJVGhr|NMtsrz\nMObsvw|JOPotj\ntPhCtl|VbhEQl\nsoEnhi|GsCnRi\nrtQRLK|hvthLW\nzjliWg|rwliKg';
+  expect(oper(selfieAndDiag, 'NJVGhr\nMObsvw\ntPhCtl\nsoEnhi\nrtQRLK\nzjliWg')).toBe(mirror11);
+});
 /*
 test('Rot Mirror 1', () => {
   const mirror5 = '';
