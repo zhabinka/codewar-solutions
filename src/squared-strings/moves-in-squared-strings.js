@@ -1,15 +1,8 @@
 // https://www.codewars.com/kata/moves-in-squared-strings-i/
 
-const vertMirror = str => str
-  .split('\n')
-  .map(el => [...el].reverse().join(''))
-  .join('\n');
+const vertMirror = arr => arr.map(el => [...el].reverse().join(''));
+const horMirror = arr => arr.reverse();
 
-const horMirror = str => str
-  .split('\n')
-  .reverse()
-  .join('\n');
-
-const oper = (f, data) => f(data);
+const oper = (f, data) => f(data.split('\n')).join('\n');
 
 export { oper, vertMirror, horMirror };
