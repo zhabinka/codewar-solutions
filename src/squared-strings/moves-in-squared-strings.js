@@ -26,6 +26,11 @@ const diagMirror = (arr) => {
 
 const rot90Clock = arr => vertMirror(diagMirror(arr));
 
+const selfieAndDiag = (arr) => {
+  const diagonaleArr = diagMirror(arr);
+  return arr.map((el, i) => [el].concat(diagonaleArr[i]).join('|'));
+};
+
 const oper = (f, data) => f(data.split('\n')).join('\n');
 
 export {
@@ -36,5 +41,5 @@ export {
   selfieAndRot,
   diagMirror,
   rot90Clock,
-  // selfieAndDiag,
+  selfieAndDiag,
 };
