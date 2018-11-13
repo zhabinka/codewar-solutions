@@ -11,7 +11,7 @@ const selfieAndRot = (arr) => {
   return selfieArr.concat(rot(selfieArr));
 };
 
-const diagMirror = (arr) => {
+const leftDiagMirror = (arr) => {
   const iter = (data, i) => {
     if (i === data.length) {
       return [];
@@ -24,10 +24,12 @@ const diagMirror = (arr) => {
   return iter(arr, 0);
 };
 
-const rot90Clock = arr => vertMirror(diagMirror(arr));
+const rightDiagMirror = arr => leftDiagMirror(rot(arr));
+
+const rot90Clock = arr => vertMirror(leftDiagMirror(arr));
 
 const selfieAndDiag = (arr) => {
-  const diagonaleArr = diagMirror(arr);
+  const diagonaleArr = leftDiagMirror(arr);
   return arr.map((el, i) => [el].concat(diagonaleArr[i]).join('|'));
 };
 
@@ -39,7 +41,10 @@ export {
   horMirror,
   rot,
   selfieAndRot,
-  diagMirror,
+  leftDiagMirror,
   rot90Clock,
   selfieAndDiag,
+  rightDiagMirror,
+  // rot90Counter,
+  // selfieDiag2Counterclock,
 };

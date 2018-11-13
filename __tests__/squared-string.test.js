@@ -4,9 +4,12 @@ import {
   horMirror,
   rot,
   selfieAndRot,
-  diagMirror,
+  leftDiagMirror,
   rot90Clock,
   selfieAndDiag,
+  rightDiagMirror,
+  rot90Counter,
+  selfieDiag2Counterclock,
 } from '../src/squared-strings/moves-in-squared-strings';
 
 test('Vertical Mirror 1', () => {
@@ -49,9 +52,9 @@ test('Selfie and Rot Mirror 2', () => {
   expect(oper(selfieAndRot, 'uLcq\nJkuL\nYirX\nnwMB')).toBe(mirror8);
 });
 
-test('Diagonale Sum', () => {
+test('Left Diagonale Symmetry', () => {
   const mirror9 = 'weetvI\nuNhBWF\nUHiTNk\nyWflpG\nPxmFdj\nCwiIvZ';
-  expect(oper(diagMirror, 'wuUyPC\neNHWxw\nehifmi\ntBTlFI\nvWNpdv\nIFkGjZ')).toBe(mirror9);
+  expect(oper(leftDiagMirror, 'wuUyPC\neNHWxw\nehifmi\ntBTlFI\nvWNpdv\nIFkGjZ')).toBe(mirror9);
 });
 
 test('Rot 90-Clock', () => {
@@ -59,10 +62,26 @@ test('Rot 90-Clock', () => {
   expect(oper(rot90Clock, 'rgavce\nvGcEKl\ndChZVW\nxNWgXR\niJBYDO\nSdmEKb')).toBe(mirror10);
 });
 
-test('Selfie And Diagonale', () => {
+test('Selfie And Left Diagonale', () => {
   const mirror11 = 'NJVGhr|NMtsrz\nMObsvw|JOPotj\ntPhCtl|VbhEQl\nsoEnhi|GsCnRi\nrtQRLK|hvthLW\nzjliWg|rwliKg';
   expect(oper(selfieAndDiag, 'NJVGhr\nMObsvw\ntPhCtl\nsoEnhi\nrtQRLK\nzjliWg')).toBe(mirror11);
 });
+
+test('Right Diagonale Symmetry', () => {
+  const mirror12 = 'bTDimg\nYCHuBy\nxsqhLL\nqiXJEv\nPlRlKm\nhzXyDL';
+  expect(oper(rightDiagMirror, 'LmvLyg\nDKELBm\nylJhui\nXRXqHD\nzlisCT\nhPqxYb')).toBe(mirror12);
+});
+
+test('Rot 90-Counter', () => {
+  const mirror13 = 'JANEmw\nXchZpg\ncgsCqC\nGyIrEx\ncagOBk\nEaNyeN';
+  expect(oper(rot90Counter, 'EcGcXJ\naaygcA\nNgIshN\nyOrCZE\neBEqpm\nNkxCgw')).toBe(mirror13);
+});
+
+test('Selfie Diagonale To CounterClock', () => {
+  const mirror14 = 'NJVGhr|gKilwr|rwliKg\nMObsvw|WLhtvh|hvthLW\ntPhCtl|iRnCsG|GsCnRi\nsoEnhi|lQEhbV|VbhEQl\nrtQRLK|jtoPOJ|JOPotj\nzjliWg|zrstMN|NMtsrz';
+  expect(oper(selfieDiag2Counterclock, 'NJVGhr\nMObsvw\ntPhCtl\nsoEnhi\nrtQRLK\nzjliWg')).toBe(mirror14);
+});
+
 /*
 test('Rot Mirror 1', () => {
   const mirror5 = '';
