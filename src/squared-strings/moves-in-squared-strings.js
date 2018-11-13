@@ -27,6 +27,7 @@ const leftDiagMirror = (arr) => {
 const rightDiagMirror = arr => leftDiagMirror(rot(arr));
 
 const rot90Clock = arr => vertMirror(leftDiagMirror(arr));
+const rot90Counter = arr => vertMirror(rightDiagMirror(arr));
 
 const selfieAndDiag = (arr) => {
   const diagonaleArr = leftDiagMirror(arr);
@@ -45,6 +46,6 @@ export {
   rot90Clock,
   selfieAndDiag,
   rightDiagMirror,
-  // rot90Counter,
+  rot90Counter,
   // selfieDiag2Counterclock,
 };
