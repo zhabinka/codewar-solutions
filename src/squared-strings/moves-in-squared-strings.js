@@ -34,6 +34,15 @@ const selfieAndDiag = (arr) => {
   return arr.map((el, i) => [el].concat(diagonaleArr[i]).join('|'));
 };
 
+const selfieDiag2Counterclock = (arr) => {
+  const diagonaleArr = rightDiagMirror(arr);
+  const rotCounterArr = rot90Counter(arr);
+
+  return arr.map((el, i) => [el]
+    .concat(diagonaleArr[i], rotCounterArr[i])
+    .join('|'));
+};
+
 const oper = (f, data) => f(data.split('\n')).join('\n');
 
 export {
@@ -47,5 +56,5 @@ export {
   selfieAndDiag,
   rightDiagMirror,
   rot90Counter,
-  // selfieDiag2Counterclock,
+  selfieDiag2Counterclock,
 };
