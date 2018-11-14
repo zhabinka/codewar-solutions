@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/unique-digit-sequence/
 
-Array.prototype.last = function() {
+Array.prototype.last = function last() {
   return this[this.length - 1];
 };
 
@@ -23,7 +23,7 @@ const sequenceBuild = (n) => {
       return arr;
     }
 
-    return iter(arr.concat(getNextValue(arr)), i + 1)
+    return iter(arr.concat(getNextValue(arr)), i + 1);
   };
 
   return iter([0], 1);
