@@ -1,7 +1,7 @@
 const processString = (str) => {
-  const re = /.?#/;
+  const re = /(^|[^#])#/g;
 
-  return re.test(str) ? processString(str.replace(re, '')) : str;
+  return str.includes('#') ? processString(str.replace(re, '')) : str;
 };
 
 export default processString;
