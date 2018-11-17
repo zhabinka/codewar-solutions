@@ -15,3 +15,11 @@ test('Backspaces in string 2', () => {
 test('Backspaces in string 3', () => {
   expect(processString('###########')).toBe('');
 });
+
+test('Backspaces in string 4', () => {
+  expect(processString('831####jns###s#cas/*####-5##s##6+yqw87e##hfklsd-=-28##fds##')).toBe('6+yqw8hfklsd-=-f');
+});
+
+test('Backspaces in string 5', () => {
+  expect(processString('fjnwui#NI#(*N#ION#Onfjen################Io4f')).toBe('Io4f');
+});

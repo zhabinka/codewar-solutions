@@ -1,5 +1,5 @@
 const processString = (str) => {
-  const re = /\w?#/;
+  const re = /.?#/;
 
   return re.test(str) ? processString(str.replace(re, '')) : str;
 };
