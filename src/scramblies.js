@@ -1,5 +1,5 @@
 // https://www.codewars.com/kata/scramblies/
-/*
+
 const scramble = (chars, str) => {
   if (!chars.includes(str[0])) {
     return str.length === 0;
@@ -7,8 +7,8 @@ const scramble = (chars, str) => {
 
   return scramble(chars.replace(str[0], ''), str.slice(1));
 };
-*/
-const scramble = (chars, string) => {
+
+const scrambleLoop = (chars, string) => {
   const normalizeStr = str => str.split('').sort().join('');
 
   let charsSort = normalizeStr(chars);
@@ -25,4 +25,4 @@ const scramble = (chars, string) => {
   return true;
 };
 
-export default scramble;
+export { scramble, scrambleLoop };
