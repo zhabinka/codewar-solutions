@@ -4,13 +4,6 @@ import (
 	"math/big"
 )
 
-func factorial(n int) int {
-	if n == 1 {
-		return 1
-	}
-	return n * factorial(n - 1)
-}
-
 func EasyLine(n int) string {
 	if n == 0 {
 		return "1"
