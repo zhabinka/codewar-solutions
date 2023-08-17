@@ -3,5 +3,5 @@ defmodule Demo do
   def factorial(num) when num > 0, do: num * factorial(num - 1)
 end
 
-Demo.factorial(5) |> io.inspect
+Demo.factorial(5) |> IO.inspect
 Demo.factorial(-5) |> IO.inspect
