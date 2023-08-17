@@ -10,3 +10,5 @@ flow-typed
 .npmignore
 .vscode
 package-lock.json
+
+*.dump
